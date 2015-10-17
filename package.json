@@ -22,13 +22,17 @@
   "scripts": {
     "prepublish": "babel src/index.js --out-file index.js",
     "pretest": "standard src",
-    "test": "babel-node test/index.js | tap-spec"
+    "test": "babel-tape-runner test/**/*.js | tap-spec"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.13.3"
+  },
   "devDependencies": {
     "babel": "^5.8.23",
+    "babel-tape-runner": "^1.2.0",
+    "standard": "^5.1.0",
+    "supertest": "^1.1.0",
     "tap-spec": "^4.1.0",
-    "tape": "^4.2.1",
-    "standard": "^5.1.0"
+    "tape": "^4.2.1"
   }
 }
