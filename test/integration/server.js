@@ -1,6 +1,11 @@
+import nock from 'nock'
 import req from 'supertest'
 import test from 'tape'
 import server from '../../src/server'
+
+nock('http://www.newyorker.com')
+  .get('/')
+  .replyWithFile(200, './test/fixtures/homepage.html')
 
 test('server', t => {
   req(server)
