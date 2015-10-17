@@ -1,0 +1,34 @@
+{
+  "name": "borowitz-index",
+  "version": "0.0.0",
+  "description": "A web server that returns the current Borowitz Index",
+  "license": "MIT",
+  "author": {
+    "name": "M. Maxwell Watson",
+    "email": "hi@mmwtsn.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/attn/borowitz-index.git"
+  },
+  "bugs": {
+    "url": "https://github.com/attn/borowitz-index/issues"
+  },
+  "homepage": "https://github.com/attn/borowitz-index#readme",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "prepublish": "babel src/index.js --out-file index.js",
+    "pretest": "standard src",
+    "test": "babel-node test/index.js | tap-spec"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.1",
+    "standard": "^5.1.0"
+  }
+}
