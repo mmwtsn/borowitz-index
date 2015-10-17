@@ -30,6 +30,7 @@
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-tape-runner": "^1.2.0",
+    "nock": "^2.15.0",
     "standard": "^5.1.0",
     "supertest": "^1.1.0",
     "tap-spec": "^4.1.0",
