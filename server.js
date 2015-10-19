@@ -4,11 +4,13 @@ import {parse, count} from './helpers'
 
 const app = express()
 
+app.set('view engine', 'jade')
+
 app.get('/', (req, res) => {
   request('http://www.newyorker.com', (err, response, html) => {
     if (err || response.statusCode !== 200) throw err
 
-    res.json({ borowitz_index: count(parse(html)) })
+    res.render('index', { borowitz_index: count(parse(html)) })
   })
 })
 

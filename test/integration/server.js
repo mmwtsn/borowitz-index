@@ -11,11 +11,11 @@ test('server', t => {
   req(server)
     .get('/')
     .expect(200)
-    .expect('Content-Type', /json/)
+    .expect('Content-Type', /html/)
     .end((err, res) => {
       if (err) throw err
 
-      t.same(res.body, { borowitz_index: 0 }, 'returns Borowitz Index as JSON')
+      t.assert(res.text.match(/p.0..p/), 'returns Borowitz Index in HTML')
       t.end()
     })
 })
