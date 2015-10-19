@@ -1,6 +1,6 @@
 import fs from 'fs'
 import test from 'tape'
-import {parse, count} from '../../src/helpers'
+import {parse, count} from '../../helpers'
 
 const authors = [
   'Alexander Stille',

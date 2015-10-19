@@ -20,8 +20,8 @@
     "index.js"
   ],
   "scripts": {
-    "start": "babel-node src/index.js",
-    "pretest": "standard src",
+    "start": "babel-node index.js",
+    "pretest": "standard",
     "test": "babel-tape-runner test/**/*.js | tap-spec"
   },
   "dependencies": {

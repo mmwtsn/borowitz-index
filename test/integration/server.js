@@ -1,7 +1,7 @@
 import nock from 'nock'
 import req from 'supertest'
 import test from 'tape'
-import server from '../../src/server'
+import server from '../../server'
 
 nock('http://www.newyorker.com')
   .get('/')
