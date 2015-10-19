@@ -15,7 +15,7 @@ test('server', t => {
     .end((err, res) => {
       if (err) throw err
 
-      t.assert(res.text.match(/p.0..p/), 'returns Borowitz Index in HTML')
+      t.assert(res.text.match(/h2.0..h2/), 'returns Borowitz Index in HTML')
       t.end()
     })
 })
