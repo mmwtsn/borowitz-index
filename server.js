@@ -5,6 +5,7 @@ import {parse, count} from './helpers'
 const app = express()
 
 app.set('view engine', 'jade')
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
   request('http://www.newyorker.com', (err, response, html) => {
