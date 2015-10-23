@@ -4,6 +4,15 @@
 
 A web server that returns the current Borowitz Index ratio.
 
+## Quick Start
+
+```
+$ git clone https://github.com/mmwtsn/borowitz-index.git
+$ cd borowitz-index
+$ npm install
+$ npm start
+```
+
 ## What's the Borowitz Index?
 
 It's ratio of stories [Andy Borowitz](www.newyorker.com/contributors/andy-borowitz) currently has ranked in the most popular stories on [the New Yorker's](http://www.newyorker.com/) homepage.
