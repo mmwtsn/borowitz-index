@@ -7,7 +7,7 @@ import cheerio from 'cheerio'
  * @returns {string[]}
  */
 export function parse (html) {
-  return cheerio.load(html)('#popular-list h3 span a').map((i, el) => {
+  return cheerio.load(html)('#popular-list h3 a').map((i, el) => {
     return el.children[0].data
   }).get().slice(0, 5)
 }
