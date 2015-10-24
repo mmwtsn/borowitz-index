@@ -4,8 +4,8 @@ import test from 'tape'
 import server from '../../server'
 
 nock('http://www.newyorker.com')
-  .get('/')
-  .replyWithFile(200, './test/fixtures/homepage.html')
+  .get('/popular')
+  .replyWithFile(200, './test/fixtures/popular.html')
 
 test('server', t => {
   req(server)
@@ -15,7 +15,7 @@ test('server', t => {
     .end((err, res) => {
       if (err) throw err
 
-      t.assert(res.text.match(/h2.0..h2/), 'returns Borowitz Index in HTML')
+      t.assert(res.text.match(/h2.2..h2/), 'returns Borowitz Index in HTML')
       t.end()
     })
 })

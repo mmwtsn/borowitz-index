@@ -3,15 +3,15 @@ import test from 'tape'
 import {parse, count} from '../../helpers'
 
 const authors = [
-  'Alexander Stille',
-  'Jeremy Keehn',
-  'Paul Kedrosky',
-  'Marsh McCall',
-  'John Cassidy'
+  'Ferris Jabr',
+  'Andy Borowitz',
+  'Dana Goodyear',
+  'Andy Borowitz',
+  'The Editors'
 ]
 
 test('helpers.parse()', t => {
-  fs.readFile('./test/fixtures/homepage.html', (err, data) => {
+  fs.readFile('./test/fixtures/popular.html', (err, data) => {
     if (err) throw err
 
     t.same(parse(data), authors, 'returns an array of names')
@@ -20,6 +20,6 @@ test('helpers.parse()', t => {
 })
 
 test('helpers.parse()', t => {
-  t.equal(count(authors), 0, 'returns an integer')
+  t.equal(count(authors), 2, 'returns an integer')
   t.end()
 })

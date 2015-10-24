@@ -15,7 +15,7 @@ $ npm start
 
 ## What's the Borowitz Index?
 
-It's the number of stories that [Andy Borowitz](www.newyorker.com/contributors/andy-borowitz) currently has authored in the most popular stories list on [the New Yorker's](http://www.newyorker.com/) homepage. It can be 0-5.
+It's the number of stories that [Andy Borowitz](www.newyorker.com/contributors/andy-borowitz) currently has authored in out of the top five most popular stories from [the New Yorker](http://www.newyorker.com/).
 
 ## License
 

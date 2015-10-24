@@ -9,9 +9,9 @@ import cheerio from 'cheerio'
 export function parse (html) {
   const $ = cheerio.load(html)
 
-  const authors = $('#most-popular h3 a').map((i, el) => {
+  const authors = $('#popular-list h3 span a').map((i, el) => {
     return el.children[0].data
-  }).get()
+  }).get().slice(0, 5)
 
   return authors
 }
